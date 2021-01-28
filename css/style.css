@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root {
+    --main: rgba(39, 51, 65,0.89);
+    --bg-color: rgba(0,0,0,0.5);
+    --link: rgb(2, 162, 255);
+    --link-active: rgb(27, 2, 255);
+    --link-hover: rgb(22, 206, 175);
+}
+
+
+* { 
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+.header {
+    background-color: var(--main);
+    height: 50%;
+    font-size: 64pt;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    grid-area: hd;
+    text-align: center;
+    border-radius: 6px 6px 0px 6px 6px;
+    color: white;
+}
+.footer {
+    grid-area: ft;
+    background-color: var(--bg-color);
+    color: white;
+}
+.gallery {
+    background-color: var(--bg-color);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px 150px 150px;
+    padding: 32px;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas:
+    "imag1 imag2 imag3"
+    "imag4 imag5 imag6"
+    "imag7 imag8 imag9";
+}
+
+.container > * {
+    justify-items: center;
+    align-items: center;
+}
+.bg { 
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: -1;
+    width: 200%;
+    background-image: url("../img/dogs_staring.jpg");
+    filter: blur(1.5rem);
+}
+.gallery > * {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border: white 5px solid;
+
+}
+.gallery > *:hover {
+    transform: scale(1.1);
+}
+.img1 {
+    background-image: url("../img/cat_bread.jpg");
+    grid-area: imag1;
+}
+.img2 {
+    grid-area: imag2;
+    background-image: url("../img/dogs_keyboard.jpg");
+
+}
+.img3 {
+    grid-area: imag3;
+    background-image: url("../img/dogs_missing.jpg");
+}
+.img4 {
+    grid-area: imag4;
+    background-image: url("../img/dogs_sleeping.jpg");
+}
+.img5 {
+    grid-area: imag5;
+    background-image: url("../img/dogs_staring.jpg");
+}
+.img6 {
+    grid-area: imag6;
+    background-image: url("../img/very_tall_cat.jpg");
+}
+.img7 {
+    grid-area: imag7;
+    background-image: url("../img/dogs_staring.jpg");
+
+}
+.img8 {
+    grid-area: imag8;
+    background-image: url("../img/very_cute.jpg");
+
+}
+.img9 {
+    grid-area: imag9;
+    background-image: url("../img/lazy_cat.jpg");
+
+}
+.contacts {
+    vertical-align: top;
+    height: 100px;
+    text-align: center;
+    background-color: var(--main);
+    color: white;
+}
+h1 {
+    vertical-align: top;
+}
+
+.main {
+    background-color: var(--bg-color);
+    border-bottom-left-radius: 16px;
+    color: white;
+    text-align: center;
+}
+a:link {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 100%;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--link-visited);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--link-active);
+    text-decoration: none;
+    font-size: 88%;
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "imag1"
+        "imag2"
+        "imag3"
+        "imag4"
+        "imag5"
+        "imag6"
+        "imag7"
+        "imag8"
+        "imag9"
+        ;
+        grid-template-rows: repeat(9,150px);
+    }
+}
+
+.contacts > h1 {
+    text-transform: uppercase;
+}
